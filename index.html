@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Fast Food Kiosk</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Version CDN gratuite -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f20d0d",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#1A1A1A",
+                        "accent-yellow": "#FFC700"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark">
+    <div class="relative flex h-screen w-full flex-col group/design-root overflow-hidden">
+        <div class="flex flex-col h-full grow">
+            <div class="flex-1 flex overflow-hidden">
+                <aside class="w-[300px] bg-white dark:bg-black flex-shrink-0 flex flex-col h-full shadow-md">
+                    <!-- <div class="p-6 border-b border-gray-200 dark:border-gray-800">
+                        <div class="flex items-center gap-4 text-gray-900 dark:text-white">
+                            <div class="size-8 text-primary">
+                                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_6_535)">
+                                        <path clip-rule="evenodd"
+                                            d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                                            fill="currentColor" fill-rule="evenodd"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6_535">
+                                            <rect fill="white" height="48" width="48"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h1 class="text-xl font-bold tracking-tight">DamiFooD</h1>
+                        </div>
+                    </div> -->
+                    <nav class="flex-1 overflow-y-auto pt-24 px-8 space-y-3">
+
+
+
+
+
+                        <a class="group category relative flex flex-col items-center justify-end text-center p-4 rounded-xl overflow-hidden text-white transition-all duration-500 ease-in-out hover:scale-105 h-32 cursor-pointer"
+                            href="#">
+                            <img alt="Sandwiches" class="absolute inset-0 size-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCib_Cku_nJIjNE3ES7mE_HYQT7tTphUKhRQEMwMa7bymqV3ZJd3JmjxDTs7e6TRKtuylrRkinJmtMG2__dbrIpFYQY29-VgiX0QfAHHvg1R64LtHmKHsE0E2SFDiR0nVLt1FMFLkUEtoaXvGHMUN49EPIkOlU86RB3SmYHZtDSdd6UuyGyeOO44ZTYLNIoJmrOezIPseBO-DJuDAKZMIIgOQ9gt1xQdrkrvJ8HbBJRBJqCHgsANrB-IvQiyjjkEtEQ_zb0cKuqyG8" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/75">
+                            </div>
+                            <div class="relative z-10 w-full">
+                                <span class="font-bold text-lg">Sandwiches</span>
+                            </div>
+                        </a>
+
+                        <a class="group category relative flex flex-col items-center justify-end text-center p-4 rounded-xl overflow-hidden text-white transition-all duration-500 ease-in-out hover:scale-105 h-32 cursor-pointer"
+                            href="#">
+                            <img alt="Pizza" class="absolute inset-0 size-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCwk1wxZSYWBjivA25QaCPrvfpayjH-MoFXNu45xegFecGGzbGAOylGZTqAmpaAg6HVH7dc_ZeBVANC0gqeGXTpjn1exCTlud8mnraqqKY9B-cxOB5bLvdNxmkTuwfvtZd5gcAAbLrLabAW2auQOCkP3psSQcqx_j7dSDYX8N8Rzo8GspsMtb3M03ENpa2I8bVKtknDIN15bizJFTIHlzlOGFeWevoylXfCqN2XdfXr3gfI7f7iqORIMGcfnWoXvmIs7qWy91oXP4" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/75">
+                            </div>
+                            <div class="relative z-10 w-full">
+                                <span class="font-bold text-lg">Pizza</span>
+                            </div>
+                        </a>
+
+                        <a class="group category relative flex flex-col items-center justify-end text-center p-4 rounded-xl overflow-hidden text-white transition-all duration-500 ease-in-out hover:scale-105 h-32 cursor-pointer"
+                            href="#">
+                            <img alt="Burgers" class="absolute inset-0 size-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXn556_0JMV2s41aFCq8JdOuoEG5yIyuzmv6BMna7vuaz0-9JfqGOoxs8Tpt2CltbJcszV5ekegaTyZiVfDEYt6dmG5SqQW_NIicvU6gOHXjixhkXgKFudnNpHCjSIvGjMhyu-McAtWmY6Lb43Nsm6-Wi77gBHPC4GacnE_WC4vMaPMzwRbQaWvm35SQJVe197TI8UYXxM-045zOYx0Bz8zW8Bs_DqNUb_ApoV2obUjfK1sLpJX4tn4XBLJ6BeFkB0W8yVMdBbBQw" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/75">
+                            </div>
+                            <div class="relative z-10 w-full">
+                                <span class="font-bold text-lg">Burgers</span>
+                            </div>
+                        </a>
+
+
+                        <a class="group category relative flex flex-col items-center justify-end text-center p-4 rounded-xl overflow-hidden text-white transition-all duration-500 ease-in-out hover:scale-105 h-32 cursor-pointer"
+                            href="#">
+                            <img alt="Sides &amp; Snacks" class="absolute inset-0 size-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1K13HUc1RVTmgaIZ7tCvqb3btIHq9-jxWXYbVpA_1G6d0LvYDBVPE_x1YuypF_dy3fi4imNZ84TRRwTxmpjkkJC21Z06Lo2Q72xHsXb0ZdXxdrfFW4auyVvS_qlyd3VAzMsdhVCz4KqGnkber8BRBCm4A3Q54O2ZaQNeCLZUnrleIcnIsWLNzG3kJFXGtpYCdN3enkNGVHbtZ4MuTvK6Z1QCIjGHnWBNmE3Clovhkz_kVw3lJXdRe1buSbGdSTMq-lNlq-YzCP8Y" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/75">
+                            </div>
+                            <div class="relative z-10 w-full">
+                                <span class="font-bold text-lg">Sides &amp; Snacks</span>
+                            </div>
+                        </a>
+
+
+                        <a class="group category relative flex flex-col items-center justify-end text-center p-4 rounded-xl overflow-hidden text-white transition-all duration-500 ease-in-out hover:scale-105 h-32 cursor-pointer"
+                            href="#">
+                            <img alt="Drinks" class="absolute inset-0 size-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGoW7vqARdXTYYlz8LHfLtDIu3g8TukkhDAfd3dsuAOMUdS4sy-hocj9QV_5aSwm17EI4lHwBDLgFZ1Fg_bRAFNn58012x7b-dTcF1-mgB85Wuo_-1FPER8ifupUf3VOlmWHkCg6VD4b8QyLq36tGutiHKcscH9r5F-nbv6pX_89gRyMqVuTKTZNxlpdNg96Qt2ODBW1jIXDniZL104HozR1hbhOVgSUYYV-yXfGu54LJo3qpAq_dr7l-wYvOcWgpjTktpBZDmZeQ" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/75">
+                            </div>
+                            <div class="relative z-10 w-full">
+                                <span class="font-bold text-lg">Drinks</span>
+                            </div>
+                        </a>
+                        <a class="group category relative flex flex-col items-center justify-end text-center p-4 rounded-xl overflow-hidden text-white transition-all duration-500 ease-in-out hover:scale-105 h-32 cursor-pointer"
+                            href="#">
+                            <img alt="Desserts" class="absolute inset-0 size-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuApll2_SYvlNK4K5UMLOxt65vByH_kZrIaOiEAlPdl_gpajXNXVybaxHYBd9OLFNFlysLhbf8OVedG5ahV1LGARBL1r8vKukE8d0x1-pbipuuavYJMuibgb0YkJ3_cV1pw884Vzy8h-0c0ZIlU7rI5OMpcwYQdgz3ohNpU8q16dWdjols5gK6pRklLzo4DBuXK2bZFLI_NqOUtMjDV18hn14Z4uh9dHWzK3PT-lA2eLcYhMS4lkrAtoKsQQXQoun78pisa3nIcSsRI" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/75">
+                            </div>
+                            <div class="relative z-10 w-full">
+                                <span class="font-bold text-lg">Desserts</span>
+                            </div>
+                        </a>
+
+
+
+
+
+                        <a class="group relative flex flex-col items-center justify-end text-center p-4 rounded-xl overflow-hidden text-white transition-transform duration-300 ease-in-out hover:scale-105 h-32 "
+                            href="#">
+                            <img alt="Special Offers" class="absolute inset-0 size-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYEYvvRrSLsQiAHCHXELxwv9j42Kz7tKVzGzkF572Yx7K1657N6AOIuAL62kOTHTg8QTQaJ0JXZlbVq_AuaE2Hg769oc0XHVn1TD_0YxgJH0YvxaC_-6loteCBLVEhtodxp20ZBX0g_7GeDrGgcK6wuIPi6duFpIBqdB9pyn15nEN5E_TtkGD8XPCiBVSIyVDqoKuA7Y0AKN5XxEoewvSV_cY7LQmfjElBQk-0LsOBvKChoMSFtuRdS2mTYR_00brqHiLw_65kEbc" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300 group-hover:from-black/75">
+                            </div>
+                            <div class="relative z-10 w-full">
+                                <span class="font-bold text-lg">Special
+                                    Offers</span>
+                            </div>
+                        </a>
+
+
+
+                    </nav>
+
+
+                    <div class="p-4 mt-auto">
+
+                    </div>
+                </aside>
+                <main class="flex-1 flex flex-col h-full overflow-y-auto pt-24 px-8 md:pt-28 md:px-12">
+
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+
+
+                        <div onclick="openPopup()" class="flex flex-col gap-3 pb-3 group cursor-pointer">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform group-hover:scale-105"
+                                data-alt="A juicy classic cheeseburger with lettuce, tomato, and onion in a sesame seed bun."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIFkoW-ctKWF5aAd3ho7KPoYuTqYJlUV2mrkekZcpTAWG9NU7_dtcNLCIuLAS9OSUxFTu902oefbdPz9sTwV0ETXtPSRCZQLkWygMdEeyoP9Q9Jp8GdygxWMYWgi5SJ6cXe8YBBjXKiyPK0iQaMCwj4TFLBWFPwDbQYKOTcsN_MPGlMSUlKlZE1_K5oi7TOd4z0iBBPpbtU7JhbtEnI1PVdxYq7oEdCmK4CnvRepvf2I3vCp9LTjggto1Lc9-_RTHHkh6FWlqBta0");'>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[#1c0d0d] dark:text-white text-xl font-bold leading-normal">Classic
+                                    Cheeseburger</p>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg font-medium leading-normal">$8.99</p>
+                            </div>
+                        </div>
+
+
+                        <div onclick="openPopup()" class="flex flex-col gap-3 pb-3 group cursor-pointer">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform group-hover:scale-105"
+                                data-alt="A crispy spicy chicken sandwich with pickles on a brioche bun."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1wJsjtjdXNFK0qfF8aUN_wdGB9ZXy93SXr0fZ8kpp3N-Er4VxHVxu-RIawN7NBqa7-469_YyEzrNW-FYLVCiC6rV1TVziNGpU5Ax7axhAveb2muZsnBz_VmUFetNz_ba8eCSpwI8MQ2G6N4t_OuMLn821W1qITI_jK6vUx45U-ciGhzDMjUbH4XhPX0rXg28J1TpTWtrqU_WBQGtd-gxCvLVHL1blAHT4ijcUV1CT0oOB2QHxTp153O-OIej4w4ljNq4bFYaeUR4");'>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[#1c0d0d] dark:text-white text-xl font-bold leading-normal">Spicy Chicken
+                                    Sandwich</p>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg font-medium leading-normal">$9.49</p>
+                            </div>
+                        </div>
+                        <div onclick="openPopup()" class="flex flex-col gap-3 pb-3 group cursor-pointer">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform group-hover:scale-105"
+                                data-alt="A large double bacon burger with cheese, stacked high."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsaRHAB1dBiy5aYINU2F5D-E5txjRXHuPZ_vMaHA9fh6mOKVXGw4lDxBqWQi-iIaC4HGlcbdqpPvEHzDZnVAStNMPP4MNC244tuRBafQByb6nAw14loEXS13Km_Sgor4qogAq5w_p34RbFema3IY1V-EKsrf-BDHMJsVeqe0mdFU99UBjavS2OYYz_2HL_S_MbfVEsar_9AStpIElBpcu31XFYpI7nihmAFHUKbVWFcfucpvUJn8KmDMF0shdCMThrhUUg6TdX_Cs");'>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[#1c0d0d] dark:text-white text-xl font-bold leading-normal">Double Bacon
+                                    Burger</p>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg font-medium leading-normal">$10.99
+                                </p>
+                            </div>
+                        </div>
+                        <div onclick="openPopup()" class="flex flex-col gap-3 pb-3 group cursor-pointer">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform group-hover:scale-105"
+                                data-alt="A veggie burger with a variety of fresh vegetables and a whole wheat bun."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6Ao4MYjEh0uhLMlwxOfxsGIL4izYuDgEO3OI6jD2H_-V4Wpe84rQOBNWx03D9HFyJwIlM-ZeuO9_PnIiJ2sOF4u4GwG5snYg6CNX3GJvrk9S4pVuRBluzf7tkhQ58vMZIlCHPMnI-Z2GNXdh_MuBrQZ9sr8LUY1eyGu6BtjJQIDSloA586Ke0dp2mi4st_SqI9R8UJnEDgYUIaIHR_A5xfPilamdIy68_lWMGMZCRRmYvfkZFmrk8VmaYczi-7-ygFLhk2X8jEiI");'>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[#1c0d0d] dark:text-white text-xl font-bold leading-normal">Veggie
+                                    Supreme Burger</p>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg font-medium leading-normal">$8.99</p>
+                            </div>
+                        </div>
+                        <div onclick="openPopup()" class="flex flex-col gap-3 pb-3 group cursor-pointer">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform group-hover:scale-105"
+                                data-alt="A grilled chicken club sandwich with bacon, lettuce, and tomato."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBAeS5tSloQcylcv_FxGP4SaCm8saRBnVSmc-0XsJXw_zl0WHuGn3eZMH8_ThKnxDejD8smMBIF6MDFm_bevkWIHZ9LEwpnDgisYZQkrtIhnLStL9n0sQsmS4eofVEkumMEFKQ-f0zMRaPF4vtfj0dm90eqwaicXvhOdomrwDqsjv_Pab4aQjq1mDQN4ae2spWgG6Jvo1Np4hYKgrJBu01WhJLzedRL9LPO8Da34u9pTQSqIf6gGw0RYpb7NMdfunfvp9DS2-G-xgA");'>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[#1c0d0d] dark:text-white text-xl font-bold leading-normal">Grilled
+                                    Chicken Club</p>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg font-medium leading-normal">$9.99</p>
+                            </div>
+                        </div>
+                        <div onclick="openPopup()" class="flex flex-col gap-3 pb-3 group cursor-pointer">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform group-hover:scale-105"
+                                data-alt="A crispy fish filet sandwich with tartar sauce."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfQ5aLPZM3g3sgsV6WFmKaj54aSxyWJ5HEUnlAelMZ-dXvv7RbU7HWt9CE_69BSMrA8U5zOy4_zLV7EKCPpa4ct0vqYT8JSdPJfJLGUEspfLZ2yy22g50-w1aVBkYRYW_gZzrVnO7c5luMvfePLpy6lJgFjlNmCx9TBq5QJlFArhXFdNWjIzgsOVjmjfsdMcFEUiVM4mM_dawtudRRxlxSX6YMtOlOU5Lc-PusB3DvPZG6xO8lh5SilTe5mPgwAW2uqQjz8q953ro");'>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[#1c0d0d] dark:text-white text-xl font-bold leading-normal">Fish Filet
+                                    Sandwich</p>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg font-medium leading-normal">$7.99</p>
+                            </div>
+                        </div>
+                        <div onclick="openPopup()" class="flex flex-col gap-3 pb-3 group cursor-pointer">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform group-hover:scale-105"
+                                data-alt="A mushroom and swiss burger on a dark bun."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdOp17j9CjX9fjyNmhGBugz3zsu84I6JhgUmYFSo2Dmuwj4uNyRuqOLAfvzS741tPAPENjFcN431n80sqK8gcayJdU_J88yDmmQ7bmsNZDSnNh9XKlGHnUQx0MTjGEFnukYZ4HpXlndhVE_5wmlYUqsw9iXbzz9RmShpnkI_oAf37cSedoe9_UXViALbn7AVnwk0wqtAw8-NxYJxWqoBj-d3y1R1moxfoa24Y35NIOYbn-_054h9zJr9U7BqSRbX9e-hveH6uTFSU");'>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[#1c0d0d] dark:text-white text-xl font-bold leading-normal">Mushroom
+                                    Swiss Burger</p>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg font-medium leading-normal">$9.49</p>
+                            </div>
+                        </div>
+                        <div onclick="openPopup()" class="flex flex-col gap-3 pb-3 group cursor-pointer">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl transition-transform group-hover:scale-105"
+                                data-alt="A pulled pork sandwich with coleslaw on top."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBx_ZYBixxQaFy4wVaOk_K74jntJMN7qoFafysehqS5zYHV6WSZsyvhpWOeXshOwdoJhFidYZ3-vhIhTckZ2jXYy2qEKPz6Ljwh6CF6TP-DgORaxr1Zs9-f_i-Ez95VJ6XDNCwh1iVcOU5wsHxhya4utkcL-DVjIUHtcd5HTculZXjJlTmSgb7R6dAdzbhHyw8xAmSSlb8XgCuyjzHh4HxeQRslG-0JS1Ob845Vu5OjZ_xyPHGl7AEVxANXPXW97ag7z9SxwmXMSWo");'>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[#1c0d0d] dark:text-white text-xl font-bold leading-normal">Pulled Pork
+                                    Sandwich</p>
+                                <p class="text-gray-600 dark:text-gray-300 text-lg font-medium leading-normal">$10.49
+                                </p>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </main>
+            </div>
+
+
+            <!-- Hidden Checkbox Toggle -->
+            <input checked class="peer hidden" id="order-toggle" type="checkbox" />
+
+            <!-- Footer (My Order) -->
+
+            <input type="checkbox" id="order-toggle" class="peer hidden">
+
+            <!-- La checkbox toggle -->
+            <input type="checkbox" id="order-toggle" class="peer hidden"> <!-- PAS checked -->
+
+            <footer class="absolute inset-x-0 top-0 h-4/5 bg-white dark:bg-black
+               shadow-[0_4px_12px_rgba(0,0,0,0.15)]
+               transition-transform duration-500 ease-in-out
+               -translate-y-[calc(100%-70px)] peer-checked:translate-y-0
+               flex flex-col z-50">
+
+
+                <div class="flex-1 overflow-y-auto p-6">
+                    <div class="space-y-4">
+
+                        <!-- Item 1 -->
+                        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg cursor-pointer"
+                            onclick="toggleDetails(this)">
+                            <div class="flex items-center justify-between p-4">
+                                <!-- Left: Image + Name -->
+                                <div class="flex items-center gap-4">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXn556_0JMV2s41aFCq8JdOuoEG5yIyuzmv6BMna7vuaz0-9JfqGOoxs8Tpt2CltbJcszV5ekegaTyZiVfDEYt6dmG5SqQW_NIicvU6gOHXjixhkXgKFudnNpHCjSIvGjMhyu-McAtWmY6Lb43Nsm6-Wi77gBHPC4GacnE_WC4vMaPMzwRbQaWvm35SQJVe197TI8UYXxM-045zOYx0Bz8W8Bs_DqNUb_ApoV2obUjfK1sLpJX4tn4XBLJ6BeFkB0W8yVMdBbBQw"
+                                        alt="Classic Cheeseburger" class="w-20 h-20 rounded-lg object-cover" />
+                                    <div>
+                                        <p class="font-bold text-gray-900 dark:text-white text-lg">Classic Cheeseburger
+                                        </p>
+                                        <p class="text-gray-500 dark:text-gray-400">$8.99</p>
+                                    </div>
+                                </div>
+
+                                <!-- Right: Total + Delete -->
+                                <div class="flex items-center gap-3">
+                                    <h2 class="font-bold text-gray-900 dark:text-white">14.00 €</h2>
+                                    <button id="deleteBtn"
+                                        class="flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white hover:bg-red-600 transition">
+                                        <span class="material-symbols-outlined">delete</span>
+                                    </button>
+
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!-- Details (hidden by default) -->
+                            <div class="details max-h-0 overflow-hidden transition-all duration-300">
+                                <ul class="p-4 space-y-2 bg-green-50 dark:bg-green-900 rounded-b-lg">
+                                    <li class="flex justify-between">
+                                        <span>Sauce: Ketchup</span>
+                                        <span class="font-semibold">Free</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span>Sauce: Mayonnaise</span>
+                                        <span class="font-semibold">Free</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span>Boisson: Coca 50cl</span>
+                                        <span class="font-semibold">3.00 €</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span>Frite: Frite simple</span>
+                                        <span class="font-semibold">2.00 €</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg cursor-pointer"
+                            onclick="toggleDetails(this)">
+                            <div class="flex items-center justify-between p-4">
+                                <div class="flex items-center gap-4">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1wJsjtjdXNFK0qfF8aUN_wdGB9ZXy93SXr0fZ8kpp3N-Er4VxHVxu-RIawN7NBqa7-469_YyEzrNW-FYLVCiC6rV1TVziNGpU5Ax7axhAveb2muZsnBz_VmUFetNz_ba8eCSpwI8MQ2G6N4t_OuMLn821W1qITI_jK6vUx45U-ciGhzDMjUbH4XhPX0rXg28J1TpTWtrqU_WBQGtd-gxCvLVHL1blAHT4ijcUV1CT0oOB2QHxTp153O-OIej4w4ljNq4bFYaeUR4"
+                                        alt="Spicy Chicken" class="w-20 h-20 rounded-lg object-cover" />
+                                    <div>
+                                        <p class="font-bold text-gray-900 dark:text-white text-lg">Spicy Chicken
+                                            Sandwich</p>
+                                        <p class="text-gray-500 dark:text-gray-400">$9.49</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <h2 class="font-bold text-gray-900 dark:text-white">15.49 €</h2>
+                                    <button
+                                        class="flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white hover:bg-red-600 transition">
+                                        <span class="material-symbols-outlined">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="details max-h-0 overflow-hidden transition-all duration-300">
+                                <ul class="p-4 space-y-2 bg-green-50 dark:bg-green-900 rounded-b-lg">
+                                    <li class="flex justify-between">
+                                        <span>Sauce: Spicy Mayo</span>
+                                        <span class="font-semibold">Free</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span>Boisson: Pepsi 50cl</span>
+                                        <span class="font-semibold">3.00 €</span>
+                                    </li>
+                                    <li class="flex justify-between">
+                                        <span>Frite: Frite spéciale</span>
+                                        <span class="font-semibold">2.50 €</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+
+                <!-- Pay Now Button -->
+                <!-- <button
+                    class="w-full mt-6 flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-16 px-6 bg-accent-yellow text-black text-xl font-black shadow-lg">
+                    <span class="truncate fa-beat ">Payer maintenant </span>
+                </button> -->
+
+                <!-- Bouton Payer maintenant -->
+                <button id="payBtn"
+                    class="w-full mt-6 flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-16 px-6 bg-accent-yellow text-black text-xl font-black shadow-lg hover:bg-yellow-400 transition">
+                    <span class="truncate fa-beat">Payer maintenant</span>
+                </button>
+
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script>
+                    document.getElementById('payBtn').addEventListener('click', () => {
+                        Swal.fire({
+                            html: `
+        <div class="flex flex-col gap-4 w-full">
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button id="cashBtn" class="flex-1 h-28 sm:h-32 bg-green-500 text-white font-bold text-2xl rounded-xl flex items-center justify-center gap-3 hover:bg-green-600 transition-shadow shadow-lg">
+                    <i class="fa-solid fa-cash-register fa-2xl"></i>
+                </button>
+<!--
+<button id="cardBtn" class="flex-1 h-28 sm:h-32 bg-blue-600 text-white font-bold text-2xl rounded-xl flex items-center justify-center gap-3 hover:bg-blue-700 transition-shadow shadow-lg">
+    <i class="fa-solid fa-credit-card fa-2xl"></i>
+</button>
+-->
+            </div>
+            <button id="cancelBtn" class="w-full py-4 bg-red-500 text-white font-bold text-xl rounded-xl hover:bg-red-600 transition-shadow shadow-md">Annuler</button>
+        </div>
+        `,
+                            showConfirmButton: false,
+                            showCancelButton: false,
+                            customClass: {
+                                popup: 'p-6 sm:p-8 max-w-[95vw] sm:max-w-lg rounded-xl' // Agrandi ici
+                            }
+                        });
+
+                        document.addEventListener('click', function handler(e) {
+                            if (e.target.id === 'cashBtn') {
+                                Swal.close();
+                                Swal.fire('Paiement en cash sélectionné!', '', 'success');
+                                document.removeEventListener('click', handler);
+                            }
+
+                            if (e.target.id === 'cardBtn') {
+                                Swal.close();
+                                Swal.fire({
+                                    html: `
+                <div class="flex flex-col gap-4 w-full">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white">Informations de la carte</h3>
+                    <input id="cardNumber" class="swal2-input text-lg" placeholder="Numéro de carte (0000 0000 0000 0000)" maxlength="19">
+                    <input id="cardName" class="swal2-input text-lg" placeholder="Nom sur la carte">
+                    <div class="flex gap-2">
+                        <input id="expiry" class="swal2-input w-28 flex-1 text-lg" placeholder="MM/AA">
+                        <input id="cvv" class="swal2-input w-28 text-lg" placeholder="CVV" maxlength="3">
+                    </div>
+                    <div class="flex gap-4 mt-2">
+                        <button id="confirmCard" class="flex-1 py-4 bg-green-500 text-white text-xl rounded-xl font-bold hover:bg-green-600 transition-shadow shadow-lg">Confirmer</button>
+                        <button id="cancelCard" class="flex-1 py-4 bg-red-500 text-white text-xl rounded-xl font-bold hover:bg-red-600 transition-shadow shadow-md">Annuler</button>
+                    </div>
+                </div>
+                `,
+                                    showConfirmButton: false,
+                                    showCancelButton: false,
+                                    customClass: {
+                                        popup: 'p-6 sm:p-8 max-w-[95vw] sm:max-w-lg rounded-xl' // Agrandi ici aussi
+                                    }
+                                });
+
+                                document.addEventListener('click', function cardHandler(ev) {
+                                    if (ev.target.id === 'confirmCard') {
+                                        const number = document.getElementById('cardNumber').value;
+                                        const name = document.getElementById('cardName').value;
+                                        const expiry = document.getElementById('expiry').value;
+                                        const cvv = document.getElementById('cvv').value;
+                                        if (!number || !name || !expiry || !cvv) {
+                                            Swal.showValidationMessage('Veuillez remplir tous les champs');
+                                            return;
+                                        }
+                                        Swal.close();
+                                        Swal.fire('Paiement par carte effectué!', '', 'success');
+                                        document.removeEventListener('click', cardHandler);
+                                    }
+                                    if (ev.target.id === 'cancelCard') {
+                                        Swal.close();
+                                        document.removeEventListener('click', cardHandler);
+                                    }
+                                });
+
+                                document.removeEventListener('click', handler);
+                            }
+
+                            if (e.target.id === 'cancelBtn') {
+                                Swal.close();
+                                document.removeEventListener('click', handler);
+                            }
+                        });
+                    });
+                </script>
+
+                <!-- #region -->
+
+                <div class="flex items-center justify-between p-4 bg-white dark:bg-black shadow-md">
+
+                    <!-- Left -->
+                    <h1>logo </h1>
+                    <h2 class="text-lg font-bold text-gray-900 dark:text-white">fast food name </h2>
+
+                    <!-- Center (Your Order) -->
+                    <label for="order-toggle"
+                        class="cursor-pointer flex items-center justify-center gap-2 rounded-lg bg-primary text-white shadow-lg w-fit px-4 py-2">
+                        <span class="text-lg font-bold">Vos commandes <i
+                                class="fa-solid fa-basket-shopping fa-bounce fa-2xl"></i></span>
+                        <span id="order-icon"
+                            class="material-symbols-outlined text-2xl transition-transform duration-300">
+                            keyboard_arrow_down
+                        </span>
+                    </label>
+
+                    <!-- Right -->
+
+                    <h2 class="text-lg font-bold text-gray-900 dark:text-white"></h2>
+                    <h2 class="text-lg font-bold text-gray-900 dark:text-white">Total à payer : 14.30 €</h2>
+                </div>
+
+
+
+            </footer>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- ====== Customization Popup (Modal) ====== -->
+    <div id="customPopup"
+        class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+        <div id="popupContent"
+            class="flex max-h-[90vh] w-full max-w-5xl rounded-xl bg-white dark:bg-gray-900 shadow-2xl relative overflow-hidden opacity-0 scale-95 transition-all duration-300 ease-out">
+
+            <!-- ====== Section principale ====== -->
+            <div class="flex-1 flex flex-col p-6 overflow-y-auto">
+                <div
+                    class="sticky top-0 z-10 flex items-start gap-6 mb-6 bg-white/80 rounded-xl p-4 shadow-md backdrop-blur-md">
+                    <!-- Image du produit -->
+                    <div class="w-40 h-40 bg-center bg-no-repeat bg-cover rounded-lg flex-shrink-0"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAk_6g6t4D_guN9o46qMw9zcd8D9_XgMMckbOVYFV9tQ0CEqO4_PRqPdL6gZoQidzpuW-bwi819ld72ULR2qG8T9C20s_XZoQiKpsE4gVaV54_4JzscFsNQVVuond8it5pYiFhF-QveBke-xCCnzA_0DM0nNczGumPoUwgjPhhFgHhv2EdCn8svvqBVcD8cTvj7OrpJ4cu9oUNoCnrHyxwf305Iv1tXQ7OeFzI45gqIWrmm0Dtf8jdjW1gmbYI7GQ_pHXNtzIgRs2E");'>
+                    </div>
+
+                    <!-- Informations du produit -->
+                    <div class="flex flex-col justify-center">
+                        <h2 class="text-[#1c0d0d] dark:text-white text-3xl font-extrabold mb-2">
+                            Classic Cheeseburger
+                        </h2>
+                        <p class="text-gray-600 dark:text-gray-300 text-lg">
+                            bœuf, salade, fromage cheddar, tomate, pain brioché.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- ====== Options ====== -->
+                <div class="space-y-6">
+                    <!-- Sauces -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-3 text-[#1c0d0d] dark:text-white">Sauces</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJrofCh4v4qtyS0cSI1gvPRG0hKn1srfMq5is0CtvkcAf34-hM_CRNd_PuPTyd4TffxvUZ_ZrxGFlNqZpcDwgGVeg1icSOWUIUOsF5F5m5Z1gAVnSNiebIFzMpRwdPc5KiUtNUmD1EymW7vEixn6De5dpA6mU-AH_dOU8nLzJsl5CcTmSXvK6llLl1xKo4UMktFBZLsUaaTYcIuKQiVKU6IxAkZZoCkD95YXmMKRUaKEsk27zVpGweQGYZCg-ePZx8q79ixYFh_84" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Ketchup</p>
+                                        <p class="text-xs text-[#9c4949]">Free</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcqD0qq7tj6Ns4RSKe_stXLLFBpDS3hbTK8po3TuQLHAm0q265Cplj4-A7xa6W1yw-npbksh39I_arszYqbEgfR3J4lNEezPk9z_Y31P2qAA8p-0SDuvIcliOyxlcsZGDHQYoTePT60Oic7H0Aw8joyCfHcp4e-vtuungYsyKOoWvx9OG5mkB672FSHs9Ftv8wzS-PTLsxpWizP9byrxMjWUU-r1Fld-vfvNiKTPXBNj34KYnkpYfoP4sl_vRPuXHM69Fq8HRRR6E" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Mayonnaise</p>
+                                        <p class="text-xs text-[#9c4949]">Free</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGOznBJISuk6WfB4Z9nV9tLC9gtUl_t5bg6x2fgLUWgb-LFIzuOFSpR8zBLpYdgQLrRJZFx6d9tAF3ljRwWBL_UxTgQTKmtMxc6Q17kWnlZO-yn9IiD0KFFg4ikDCM8CoKCI-rQhtrx4_SfvL7gK32lymcc45T3YVv29kaDdQvIP0kyX4OWVNg4g8BGPsVskPCuu4zagjvLYPxnr2N6_dL74S9nsJeWSmTOX1ZvX-LyuumkRFzgd4URAmJHjM3gJiZGlsdjo4A6L4" />
+                                    <div>
+                                        <p class="font-semibold text-sm">BBQ</p>
+                                        <p class="text-xs text-[#9c4949]">+ $0.50</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Extras -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-3 text-[#1c0d0d] dark:text-white">Suppléments</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNSgi7K_f9qy-GBe7sBF0tuF9A69QQz7xLk7b3SUrJKsv8a91DpBiGCM282FXW3jYlPceMrVzCtKDy7P2tjgcFzeyp9Il2dg12VXYd_qSisMDwh0vEZvaHPsEgdzPEDwrYqx2A2T7tTkeZtCjyIhqEZs5SJ_r3eUPACydXQQ4KKvXylMQI4KrEI4mCfC7mgpa3Wc06VzLPeomI3J4Qg7EcoV9zcWFhipPaQa4EEBTefN55d9QKj98O5S40NOSnVeQRUevf84qt1Ow" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Cheese</p>
+                                        <p class="text-xs text-[#9c4949]">+ $1.00</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTHfvM2iCLE9VadE_sZ9t8q8i6bUdJPs5g0-GtniwnR4wTvlDfuYq_h4YWr8e4YOBgLQo4T3dMXFfAATcIo0paHMYuRFMc-4s5sy9Ll1hxhtMdLOl9Wp5W-DjZwVURVo7NhBIWOFM2xBhFiDNM4RRWo7V9_D0BlKOHaiV4LuI3xMisQske1uWpUI7PzIuyyF-jdIsiGO7uG0ONo7jRgGm9nrCN2-MXNuyCrd2qoJtiPfW6b1PSX4lOn5dYUB-fEg58Jh_9tsoczI" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Bacon</p>
+                                        <p class="text-xs text-[#9c4949]">+ $1.50</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- frites -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-3 text-[#1c0d0d] dark:text-white">Frites </h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNSgi7K_f9qy-GBe7sBF0tuF9A69QQz7xLk7b3SUrJKsv8a91DpBiGCM282FXW3jYlPceMrVzCtKDy7P2tjgcFzeyp9Il2dg12VXYd_qSisMDwh0vEZvaHPsEgdzPEDwrYqx2A2T7tTkeZtCjyIhqEZs5SJ_r3eUPACydXQQ4KKvXylMQI4KrEI4mCfC7mgpa3Wc06VzLPeomI3J4Qg7EcoV9zcWFhipPaQa4EEBTefN55d9QKj98O5S40NOSnVeQRUevf84qt1Ow" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Frites Normales</p>
+                                        <p class="text-xs text-[#9c4949]">+ $3.00</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTHfvM2iCLE9VadE_sZ9t8q8i6bUdJPs5g0-GtniwnR4wTvlDfuYq_h4YWr8e4YOBgLQo4T3dMXFfAATcIo0paHMYuRFMc-4s5sy9Ll1hxhtMdLOl9Wp5W-DjZwVURVo7NhBIWOFM2xBhFiDNM4RRWo7V9_D0BlKOHaiV4LuI3xMisQske1uWpUI7PzIuyyF-jdIsiGO7uG0ONo7jRgGm9nrCN2-MXNuyCrd2qoJtiPfW6b1PSX4lOn5dYUB-fEg58Jh_9tsoczI" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Frites Cheddar</p>
+                                        <p class="text-xs text-[#9c4949]">+ $4.00</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTHfvM2iCLE9VadE_sZ9t8q8i6bUdJPs5g0-GtniwnR4wTvlDfuYq_h4YWr8e4YOBgLQo4T3dMXFfAATcIo0paHMYuRFMc-4s5sy9Ll1hxhtMdLOl9Wp5W-DjZwVURVo7NhBIWOFM2xBhFiDNM4RRWo7V9_D0BlKOHaiV4LuI3xMisQske1uWpUI7PzIuyyF-jdIsiGO7uG0ONo7jRgGm9nrCN2-MXNuyCrd2qoJtiPfW6b1PSX4lOn5dYUB-fEg58Jh_9tsoczI" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Frites Bacon</p>
+                                        <p class="text-xs text-[#9c4949]">+ $4.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTHfvM2iCLE9VadE_sZ9t8q8i6bUdJPs5g0-GtniwnR4wTvlDfuYq_h4YWr8e4YOBgLQo4T3dMXFfAATcIo0paHMYuRFMc-4s5sy9Ll1hxhtMdLOl9Wp5W-DjZwVURVo7NhBIWOFM2xBhFiDNM4RRWo7V9_D0BlKOHaiV4LuI3xMisQske1uWpUI7PzIuyyF-jdIsiGO7uG0ONo7jRgGm9nrCN2-MXNuyCrd2qoJtiPfW6b1PSX4lOn5dYUB-fEg58Jh_9tsoczI" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Frites Cheddar, Bacon</p>
+                                        <p class="text-xs text-[#9c4949]">+ $5.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- boison -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-3 text-[#1c0d0d] dark:text-white">boison</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200 drink-item">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNSgi7K_f9qy-GBe7sBF0tuF9A69QQz7xLk7b3SUrJKsv8a91DpBiGCM282FXW3jYlPceMrVzCtKDy7P2tjgcFzeyp9Il2dg12VXYd_qSisMDwh0vEZvaHPsEgdzPEDwrYqx2A2T7tTkeZtCjyIhqEZs5SJ_r3eUPACydXQQ4KKvXylMQI4KrEI4mCfC7mgpa3Wc06VzLPeomI3J4Qg7EcoV9zcWFhipPaQa4EEBTefN55d9QKj98O5S40NOSnVeQRUevf84qt1Ow" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Coca</p>
+                                        <p class="text-xs text-[#9c4949]">+ $3.00</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200 drink-item">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTHfvM2iCLE9VadE_sZ9t8q8i6bUdJPs5g0-GtniwnR4wTvlDfuYq_h4YWr8e4YOBgLQo4T3dMXFfAATcIo0paHMYuRFMc-4s5sy9Ll1hxhtMdLOl9Wp5W-DjZwVURVo7NhBIWOFM2xBhFiDNM4RRWo7V9_D0BlKOHaiV4LuI3xMisQske1uWpUI7PzIuyyF-jdIsiGO7uG0ONo7jRgGm9nrCN2-MXNuyCrd2qoJtiPfW6b1PSX4lOn5dYUB-fEg58Jh_9tsoczI" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Ruiba</p>
+                                        <p class="text-xs text-[#9c4949]">+ $1.50</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200 drink-item">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTHfvM2iCLE9VadE_sZ9t8q8i6bUdJPs5g0-GtniwnR4wTvlDfuYq_h4YWr8e4YOBgLQo4T3dMXFfAATcIo0paHMYuRFMc-4s5sy9Ll1hxhtMdLOl9Wp5W-DjZwVURVo7NhBIWOFM2xBhFiDNM4RRWo7V9_D0BlKOHaiV4LuI3xMisQske1uWpUI7PzIuyyF-jdIsiGO7uG0ONo7jRgGm9nrCN2-MXNuyCrd2qoJtiPfW6b1PSX4lOn5dYUB-fEg58Jh_9tsoczI" />
+                                    <div>
+                                        <p class="font-semibold text-sm"> Eau 50cl</p>
+                                        <p class="text-xs text-[#9c4949]">+ $1.50</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200 drink-item">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTHfvM2iCLE9VadE_sZ9t8q8i6bUdJPs5g0-GtniwnR4wTvlDfuYq_h4YWr8e4YOBgLQo4T3dMXFfAATcIo0paHMYuRFMc-4s5sy9Ll1hxhtMdLOl9Wp5W-DjZwVURVo7NhBIWOFM2xBhFiDNM4RRWo7V9_D0BlKOHaiV4LuI3xMisQske1uWpUI7PzIuyyF-jdIsiGO7uG0ONo7jRgGm9nrCN2-MXNuyCrd2qoJtiPfW6b1PSX4lOn5dYUB-fEg58Jh_9tsoczI" />
+                                    <div>
+                                        <p class="font-semibold text-sm"> Sprite 50cl</p>
+                                        <p class="text-xs text-[#9c4949]">+ $2.50</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200 drink-item">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTHfvM2iCLE9VadE_sZ9t8q8i6bUdJPs5g0-GtniwnR4wTvlDfuYq_h4YWr8e4YOBgLQo4T3dMXFfAATcIo0paHMYuRFMc-4s5sy9Ll1hxhtMdLOl9Wp5W-DjZwVURVo7NhBIWOFM2xBhFiDNM4RRWo7V9_D0BlKOHaiV4LuI3xMisQske1uWpUI7PzIuyyF-jdIsiGO7uG0ONo7jRgGm9nrCN2-MXNuyCrd2qoJtiPfW6b1PSX4lOn5dYUB-fEg58Jh_9tsoczI" />
+                                    <div>
+                                        <p class="font-semibold text-sm"> tropico 50cl</p>
+                                        <p class="text-xs text-[#9c4949]">+ $2.50</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200 drink-item">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTHfvM2iCLE9VadE_sZ9t8q8i6bUdJPs5g0-GtniwnR4wTvlDfuYq_h4YWr8e4YOBgLQo4T3dMXFfAATcIo0paHMYuRFMc-4s5sy9Ll1hxhtMdLOl9Wp5W-DjZwVURVo7NhBIWOFM2xBhFiDNM4RRWo7V9_D0BlKOHaiV4LuI3xMisQske1uWpUI7PzIuyyF-jdIsiGO7uG0ONo7jRgGm9nrCN2-MXNuyCrd2qoJtiPfW6b1PSX4lOn5dYUB-fEg58Jh_9tsoczI" />
+                                    <div>
+                                        <p class="font-semibold text-sm"> Volvic Fraise</p>
+                                        <p class="text-xs text-[#9c4949]">+ $3.00</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Extras -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-3 text-[#1c0d0d] dark:text-white">Dessert</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNSgi7K_f9qy-GBe7sBF0tuF9A69QQz7xLk7b3SUrJKsv8a91DpBiGCM282FXW3jYlPceMrVzCtKDy7P2tjgcFzeyp9Il2dg12VXYd_qSisMDwh0vEZvaHPsEgdzPEDwrYqx2A2T7tTkeZtCjyIhqEZs5SJ_r3eUPACydXQQ4KKvXylMQI4KrEI4mCfC7mgpa3Wc06VzLPeomI3J4Qg7EcoV9zcWFhipPaQa4EEBTefN55d9QKj98O5S40NOSnVeQRUevf84qt1Ow" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Tarte au daim</p>
+                                        <p class="text-xs text-[#9c4949]">+ $3.00</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTHfvM2iCLE9VadE_sZ9t8q8i6bUdJPs5g0-GtniwnR4wTvlDfuYq_h4YWr8e4YOBgLQo4T3dMXFfAATcIo0paHMYuRFMc-4s5sy9Ll1hxhtMdLOl9Wp5W-DjZwVURVo7NhBIWOFM2xBhFiDNM4RRWo7V9_D0BlKOHaiV4LuI3xMisQske1uWpUI7PzIuyyF-jdIsiGO7uG0ONo7jRgGm9nrCN2-MXNuyCrd2qoJtiPfW6b1PSX4lOn5dYUB-fEg58Jh_9tsoczI" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Tiramisu</p>
+                                        <p class="text-xs text-[#9c4949]">+ $4.50</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="option-item flex items-center justify-between p-3 border border-gray-300 rounded-lg hover:bg-red-100 cursor-pointer transition-all duration-200">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 rounded-md object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTHfvM2iCLE9VadE_sZ9t8q8i6bUdJPs5g0-GtniwnR4wTvlDfuYq_h4YWr8e4YOBgLQo4T3dMXFfAATcIo0paHMYuRFMc-4s5sy9Ll1hxhtMdLOl9Wp5W-DjZwVURVo7NhBIWOFM2xBhFiDNM4RRWo7V9_D0BlKOHaiV4LuI3xMisQske1uWpUI7PzIuyyF-jdIsiGO7uG0ONo7jRgGm9nrCN2-MXNuyCrd2qoJtiPfW6b1PSX4lOn5dYUB-fEg58Jh_9tsoczI" />
+                                    <div>
+                                        <p class="font-semibold text-sm">Muffin Nutella</p>
+                                        <p class="text-xs text-[#9c4949]">+ $3.50</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <!-- ====== Résumé ====== -->
+            <div
+                class="w-80 bg-gray-100 dark:bg-gray-800 p-6 flex flex-col border-l border-gray-300 dark:border-gray-700">
+                <h3 class="text-xl font-bold mb-4 text-[#1c0d0d] dark:text-white">Order Summary</h3>
+                <div class="flex-1 space-y-3 overflow-y-auto">
+                    <div class="flex justify-between">
+                        <span class="font-semibold">Classic Cheeseburger</span>
+                        <span class="font-semibold">$5.99</span>
+                    </div>
+
+                    <div class="border-t border-gray-300 pt-2 text-sm text-[#9c4949] font-bold summary-options">
+                        <!-- Les options sélectionnées vont s'insérer ici automatiquement -->
+                    </div>
+
+                </div>
+
+                <div class="mt-auto pt-4 border-t border-gray-300">
+                    <div class="flex justify-between mb-3">
+                        <span class="font-bold text-lg">Total:</span>
+                        <span class="font-extrabold text-red-600 text-xl" id="total-price">$6.99</span>
+                    </div>
+                    <button
+                        class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition-colors">
+                        Confirm
+                    </button>
+                    <button onclick="closePopup()"
+                        class="mt-3 w-full bg-gray-300 hover:bg-gray-400 text-black font-bold py-3 rounded-lg transition-colors">
+                        Close
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bouton Fermer (coin supérieur) -->
+            <button onclick="closePopup()"
+                class="absolute top-3 right-4 text-gray-500 hover:text-red-600 text-3xl font-bold">
+                ×
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+<!-- ====== animation de categories  ====== -->
+
+<script>
+    // Sélectionne toutes les catégories
+    const categories = document.querySelectorAll('.category');
+
+    categories.forEach(cat => {
+        cat.addEventListener('click', () => {
+            // Réinitialiser toutes les hauteurs à h-32
+            categories.forEach(c => {
+                c.classList.remove('h-80');
+                c.classList.add('h-32');
+            });
+
+            // Agrandir celle qu'on a cliquée
+            cat.classList.remove('h-32');
+            cat.classList.add('h-80');
+        });
+    });
+</script>
+
+
+<!-- ====== check button de popup affichage  ====== -->
+<script>
+    // ✅ Quand on clique sur la carte → active/désactive le fond rouge transparent
+    document.querySelectorAll('.option-item').forEach((item) => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('bg-red-100'); // Rouge clair transparent
+            item.classList.toggle('bg-opacity-90'); // Transparence douce
+            item.classList.toggle('ring-2');
+            item.classList.toggle('ring-red-500');
+        });
+    });
+</script>
+
+
+
+<!-- ====== Script avec animation pour le Popup ====== -->
+<script>
+    function openPopup() {
+        const popup = document.getElementById('customPopup');
+        const content = document.getElementById('popupContent');
+        popup.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+        setTimeout(() => {
+            content.classList.remove('opacity-0', 'scale-95');
+            content.classList.add('opacity-100', 'scale-100');
+        }, 10);
+    }
+
+    function closePopup() {
+        const popup = document.getElementById('customPopup');
+        const content = document.getElementById('popupContent');
+        content.classList.remove('opacity-100', 'scale-100');
+        content.classList.add('opacity-0', 'scale-95');
+        setTimeout(() => {
+            popup.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }, 300);
+    }
+
+    // ✅ Option selection effect (rouge transparent)
+    document.querySelectorAll('.option-item').forEach((item) => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('bg-red-200/60');
+        });
+    });
+</script>
+
+<!-- button up and down -->
+
+<script>
+    const orderToggle = document.getElementById('order-toggle');
+    const orderIcon = document.getElementById('order-icon');
+
+    orderToggle.addEventListener('change', () => {
+        if (orderToggle.checked) {
+            orderIcon.textContent = 'keyboard_arrow_down';
+        } else {
+            orderIcon.textContent = 'keyboard_arrow_up';
+        }
+    });
+</script>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const drinkItems = document.querySelectorAll('.drink-item');
+        const orderSummaryList = document.getElementById('order-summary-list');
+        const totalPriceEl = document.getElementById('total-price');
+        let selectedDrinks = new Map();
+        let total = 0;
+        const formatPrice = (price) => {
+            return price.toFixed(2).replace('.', ',') + '€';
+        };
+        const updateSummary = () => {
+            orderSummaryList.innerHTML = '';
+            total = 0;
+            if (selectedDrinks.size === 0) {
+                const emptyMessage = document.createElement('p');
+                emptyMessage.textContent = 'No drinks selected.';
+                emptyMessage.className = 'text-sm text-gray-500 dark:text-gray-400';
+                orderSummaryList.appendChild(emptyMessage);
+            } else {
+                selectedDrinks.forEach((drink) => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'flex justify-between items-start';
+                    const nameSpan = document.createElement('span');
+                    nameSpan.className = 'font-semibold text-sm';
+                    nameSpan.textContent = drink.name;
+                    const priceSpan = document.createElement('span');
+                    priceSpan.className = 'font-semibold text-sm text-right';
+                    if (drink.price > 0) {
+                        priceSpan.textContent = `+${formatPrice(drink.price)}`;
+                    } else {
+                        priceSpan.textContent = 'Included';
+                    }
+                    itemDiv.appendChild(nameSpan);
+                    itemDiv.appendChild(priceSpan);
+                    orderSummaryList.appendChild(itemDiv);
+                    total += drink.price;
+                });
+            }
+            totalPriceEl.textContent = formatPrice(total);
+        };
+        drinkItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const id = item.dataset.id;
+                const name = item.dataset.name;
+                const price = parseFloat(item.dataset.price);
+                item.classList.toggle('selected');
+                if (item.classList.contains('selected')) {
+                    selectedDrinks.set(id, { name, price });
+                } else {
+                    selectedDrinks.delete(id);
+                }
+                updateSummary();
+            });
+        });
+        // Initial state
+        updateSummary();
+    });
+</script>
+
+<!-- selection  -->
+
+<script>
+    const basePrice = 5.99; // prix du cheeseburger
+    let total = basePrice;
+
+    // Sélection des éléments
+    const optionItems = document.querySelectorAll(".option-item");
+    const summaryContainer = document.querySelector(".summary-options");
+    const totalPriceEl = document.getElementById("total-price");
+
+    // Objet pour stocker les items sélectionnés
+    let selectedItems = {};
+
+    optionItems.forEach(item => {
+        item.addEventListener("click", function () {
+
+            const name = this.querySelector("p.font-semibold").innerText;
+            const priceText = this.querySelector("p.text-xs").innerText;
+
+            // Détermination du prix numérique
+            let price = 0;
+            if (priceText.includes("$")) {
+                price = parseFloat(priceText.replace("+ $", ""));
+            }
+
+            // Toggle sélection corrigé
+            if (selectedItems.hasOwnProperty(name)) {
+                // Supprimer
+                delete selectedItems[name];
+                this.classList.remove("bg-red-200");
+            } else {
+                // Ajouter
+                selectedItems[name] = price;
+                this.classList.add("bg-red-200");
+            }
+
+            updateSummary();
+            updateTotal();
+        });
+    });
+
+    // Mise à jour de la liste affichée
+    function updateSummary() {
+        summaryContainer.innerHTML = ""; // clear
+
+        for (let key in selectedItems) {
+            summaryContainer.innerHTML += `
+                <div class="flex justify-between">
+                    <span>- ${key}</span>
+                    <span>${selectedItems[key] === 0 ? "Free" : "$" + selectedItems[key].toFixed(2)}</span>
+                </div>
+            `;
+        }
+    }
+
+    // Mise à jour total
+    function updateTotal() {
+        let extras = 0;
+
+        for (let key in selectedItems) {
+            extras += selectedItems[key];
+        }
+
+        total = basePrice + extras;
+
+        totalPriceEl.innerText = "$" + total.toFixed(2);
+    }
+</script>
+
+<script>
+    function toggleDetails(item) {
+        const details = item.querySelector('.details');
+        const allDetails = document.querySelectorAll('.details');
+
+        allDetails.forEach(d => {
+            if (d !== details) {
+                // Fermer les autres
+                d.style.maxHeight = null;
+            }
+        });
+
+        // Toggle actuel
+        if (details.style.maxHeight) {
+            details.style.maxHeight = null;
+        } else {
+            details.style.maxHeight = details.scrollHeight + "px";
+        }
+    }
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    document.getElementById('deleteBtn').addEventListener('click', () => {
+        Swal.fire({
+            title: 'Êtes-vous sûr de supprimer cette commande ?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Supprimer',
+            cancelButtonText: 'Annuler',
+            customClass: {
+                confirmButton: 'bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700',
+                cancelButton: 'bg-gray-300 text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-400',
+                popup: 'rounded-2xl p-6'
+            },
+            buttonsStyling: false
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Action après confirmation
+                Swal.fire({
+                    title: 'Supprimée !',
+                    text: 'La commande a été supprimée.',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    customClass: {
+                        confirmButton: 'bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700',
+                        popup: 'rounded-2xl p-6'
+                    },
+                    buttonsStyling: false
+                });
+            }
+        });
+    });
+</script>
